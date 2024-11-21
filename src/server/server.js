@@ -51,7 +51,10 @@ await import('dd-trace/init.js').then( async () => {
                 // res.send(resp.data);
                 console.log("successfully posted RUM data");
                 console.log(resp);
-                // res.send(resp.data);
+                res.send(resp.data);
+            }).catch((error) => {
+                console.log("error posting RUM data");
+                console.log(error);
             });
     });
 
